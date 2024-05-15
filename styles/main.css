@@ -79,14 +79,19 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    z-index: 5;
+    z-index: 3;
+}
+.infodiv {
+    display: flex;
+    z-index: 0;
 }
 .infoblock {
     background-color: #49f1f4;
+    background-image: url(..);
 }
 
 .wave {
-    z-index: -1;
+    z-index: 1;
 }
 
 .text {
