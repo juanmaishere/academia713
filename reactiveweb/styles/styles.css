@@ -1,23 +1,27 @@
 /* General Styles */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #111111;;
+    background-color: none;
 }
 .close-sidebar {
     display: none;
 }
 header {
-    background-color: #111111;;
+    background-color: rgba(82, 78, 78, 0.068);
     color: white;
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 0.1%;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.415)
 }
 footer {
-    background-color: #111111;
+    background-color: rgba(82, 78, 78, 0.068);
     color: white;
     display: flex;
     align-items: center;
@@ -25,24 +29,36 @@ footer {
 }
 .sidebar {
     display: none; /* Hide sidebar by default */
+    
 }
-.slides img {
-        image-rendering: optimizeQuality;
-        width: 100%;
-        max-width: 100%;
-        height: 600px;
-        object-fit: cover;
+.slides {
+    width: 100%; /* Set the width of the container to 100% */
+    height: 50rem; /* Set a fixed height for the container (adjust as needed) */
+    overflow: hidden; /* Hide any content that exceeds the container's dimensions */
+    position: relative; /* Ensure proper positioning of child elements */
 }
 
+.slides img {
+    width: 100%; /* Make the images fill the entire width of the container */
+    height: 100%; /* Make the images fill the entire height of the container */
+    object-fit: cover; /* Ensure the entire image is always visible, cropping if necessary */
+}
+#starfield {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    height: 312%;
+
+  }
 
 .textoh1 {
     position: absolute;
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: rgb(231, 222, 222);
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.63);
-    font-size: 2em; /* Adjust as needed */
+    color: rgb(230, 230, 212);
+    text-shadow: 3px 1px 5px rgba(17, 16, 16, 0.855);
+    font-size: 2.4em; /* Adjust as needed */
     text-align: center;   
     font-family: "Prompt", sans-serif;
     font-weight: 600;
@@ -132,58 +148,58 @@ nav ul li a:hover{
     align-items: center;
     gap: 1rem;
 }
-.infobuttons button,a {
+.infobuttons button {
     background-color: rgba(255, 255, 255, 0);
-    border: none;
+    border: 3px outset white;
+    border-radius: 5px;
+    padding: 0.4rem;
+    color: white;
 }
 
 .stack {
     border-bottom: 1px solid rgb(146, 138, 138);
 }
- .infox {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 15px;
-    outline: 1px solid #d5dfff;
-    justify-content: center;
-    text-align: center;
- }
+
  @keyframes scale {
  from {
     scale: 1;
 }
 to {
-    scale: 1.05;
+    scale: 1.2;
 }
 }
  .infox:hover, .info2:hover {
     animation: scale both 1.5s;
  }
 .line {
-    margin: 5px;
-    border-top: 2px solid #cbcccf;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-top: 2px solid #00000076;
 }
  .info2 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.5rem;
-    outline: 1px solid #d5dfff;
-
-    line-height: 1.5rem;
+    font-size: 1rem;
+    outline: 2px outset #47eeeb;
+    line-height: 1rem;
     text-align: center;
-    padding: 1.5rem;
-    background-color: white;
-    border-radius: 15px;
+    width: 20%;
+    height: 70%;
+    background-color: none;
+    color: white;
+    border-radius: 0px;
     justify-content: center;
+    align-content: center;
  }
+
+
+
  .mapa {
     flex: 2;
     width: 100%;
  }
  .contactus {
-    background-color: rgba(255, 255, 255, 0.884);
+    color: wheat;
+    background-color: rgba(82, 78, 78, 0.068);
     margin: 3rem;
     display: flex;
     flex-direction: row;
@@ -199,17 +215,18 @@ to {
     display: flex;
     flex-direction: column;
     max-width: 100%;
-    background-color: white;
+    background-color: none;
     padding-bottom: 100px;
 }
 .instagram-media {
     border-radius: 15px;
 }
 .infodiv {
-    border-radius: 15px;
-    padding: 1rem;
-    background-color: #fff;
-    margin: 2rem;
+    border-radius: 0px;
+    padding-top: 1rem;
+    background-color: none;
+    margin-top: 60px;
+    height: 30rem;
     display: flex;
     flex-direction: row;
     z-index: 5;
@@ -224,7 +241,7 @@ to {
 }
 
 .infoblock {
-    background-color: #111111;
+    background-color: none;
 }
 @keyframes show {
     from {
@@ -243,7 +260,7 @@ to {
     animation-timeline: --image;
     animation-name: show;
     animation-fill-mode: both;
-    animation-range: entry 10% cover 45%;
+    animation-range: entry 35% cover 50%;
     animation-iteration-count: 1;
 }
 
@@ -266,7 +283,7 @@ to {
         position: fixed;
         top: 0;
         right: 0;
-        width: 250px;
+        width: 150px;
         height: 100%;
         background-color: black;
         padding-top: 60px;
@@ -274,6 +291,8 @@ to {
         transform: translateX(100%);
         transition: transform 0.3s ease;
         visibility: hidden;
+        align-items: center;
+        z-index: 50;
     }
 
     .sidebar.open {
@@ -293,9 +312,10 @@ to {
 }
 
 @media (max-width: 768px) {
+  
     .textoh1 {
         position: absolute;
-        top: 60%;
+        top: 35%;
         left: 50%;
         transform: translate(-50%, -25%);
         color: rgb(233, 229, 222);
@@ -307,8 +327,14 @@ to {
         display: none;
     }
     .infodiv{
+        margin: 1rem;
+        padding: 0;
         display: flex;
         flex-direction: column;
+    }
+    .info2 {
+        width: 55%;
+        margin: 1rem;
     }
     .close-sidebar {
         display: block;
